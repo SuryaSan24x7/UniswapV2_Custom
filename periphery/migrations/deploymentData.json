@@ -1,0 +1,5 @@
+{
+  "network": "sepolia",
+  "routerAddress": "0x0fA0400F05e29B09559AD11D8132E6e5bd23543A",
+  "wethAddress": "0x5970a044C45869a252E9fe5b6ed3114602870dB3"
+}

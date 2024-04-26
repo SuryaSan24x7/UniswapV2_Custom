@@ -1,0 +1,52 @@
+2_deploy_contracts.js
+=====================
+
+   Deploying 'WETH'
+   ----------------
+   > transaction hash:    0x7477bf167acf3b42b01acc02f37a5a65803eb8cbce8a643c29ce29e97db49ecb
+   > Blocks: 1            Seconds: 13
+   > contract address:    0x5970a044C45869a252E9fe5b6ed3114602870dB3
+   > block number:        5780397
+   > block timestamp:     1714120236
+   > account:             0x2f7c9dF48B56C3eac337289f5297ACaF1c555e2a
+   > balance:             0.21937162031680888
+   > gas used:            830246 (0xcab26)
+   > gas price:           3.953990437 gwei
+   > value sent:          0 ETH
+   > total cost:          0.003282784744357502 ETH
+
+   Pausing for 2 confirmations...
+
+   -------------------------------
+   > confirmation number: 1 (block: 5780398)
+   > confirmation number: 2 (block: 5780399)
+
+   Deploying 'CustomV2Router02'
+   ----------------------------
+   > transaction hash:    0x7e2948cdb5b2d8e70c36fb7978341433a37a6956592b17f9da8a2e02675d07cf
+   > Blocks: 1            Seconds: 9
+   > contract address:    0x0fA0400F05e29B09559AD11D8132E6e5bd23543A
+   > block number:        5780400
+   > block timestamp:     1714120272
+   > account:             0x2f7c9dF48B56C3eac337289f5297ACaF1c555e2a
+   > balance:             0.207528232889652504
+   > gas used:            3023846 (0x2e23e6)
+   > gas price:           3.916663556 gwei
+   > value sent:          0 ETH
+   > total cost:          0.011843387427156376 ETH
+
+   Pausing for 2 confirmations...
+
+   -------------------------------
+   > confirmation number: 1 (block: 5780401)
+   > confirmation number: 2 (block: 5780402)
+Deployment data has been written to deploymentData.json
+Console logs have been written to consoleLogs.txt
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.015126172171513878 ETH
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.015126172171513878 ETH

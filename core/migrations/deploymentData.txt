@@ -1,0 +1,71 @@
+2_deploy_contracts.js
+=====================
+
+   Deploying 'CustomV2Factory'
+   ---------------------------
+   > transaction hash:    0xc9318093dfc390a69205cadd6260f66a23e71787bec82b86b5012f997c7f8319
+   > Blocks: 0            Seconds: 9
+   > contract address:    0xa79D345c50e644ca1C478f4C83fE0C3CF9e7Ac22
+   > block number:        5780283
+   > block timestamp:     1714118868
+   > account:             0x2f7c9dF48B56C3eac337289f5297ACaF1c555e2a
+   > balance:             0.249906984166668216
+   > gas used:            4138248 (0x3f2508)
+   > gas price:           4.855440233 gwei
+   > value sent:          0 ETH
+   > total cost:          0.020093015833331784 ETH
+
+   Pausing for 2 confirmations...
+
+   -------------------------------
+   > confirmation number: 1 (block: 5780284)
+   > confirmation number: 2 (block: 5780285)
+
+   Deploying 'Token1'
+   ------------------
+   > transaction hash:    0xcafc6fdfad500fb737c79a90b340edc35e214220920600ed658d78f1701418f4
+   > Blocks: 1            Seconds: 16
+   > contract address:    0x5af8820304481811Fa3B4bB0A15B8B11245F4acE
+   > block number:        5780287
+   > block timestamp:     1714118916
+   > account:             0x2f7c9dF48B56C3eac337289f5297ACaF1c555e2a
+   > balance:             0.245051539525596954
+   > gas used:            1056846 (0x10204e)
+   > gas price:           4.594278297 gwei
+   > value sent:          0 ETH
+   > total cost:          0.004855444641071262 ETH
+
+   Pausing for 2 confirmations...
+
+   -------------------------------
+   > confirmation number: 1 (block: 5780288)
+   > confirmation number: 2 (block: 5780289)
+
+   Deploying 'Token2'
+   ------------------
+   > transaction hash:    0xb48a5d7941060406d01864fdff113b7236268c4605821d1ac16e5eb7bc346813
+   > Blocks: 2            Seconds: 16
+   > contract address:    0xBFa4E445F77Af3373db816D20D2360cA8370E259
+   > block number:        5780291
+   > block timestamp:     1714118964
+   > account:             0x2f7c9dF48B56C3eac337289f5297ACaF1c555e2a
+   > balance:             0.23996471222141538
+   > gas used:            1056846 (0x10204e)
+   > gas price:           4.813215269 gwei
+   > value sent:          0 ETH
+   > total cost:          0.005086827304181574 ETH
+
+   Pausing for 2 confirmations...
+
+   -------------------------------
+   > confirmation number: 1 (block: 5780292)
+   > confirmation number: 2 (block: 5780293)
+Deployment data has been written to deploymentData.json
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.03003528777858462 ETH
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.03003528777858462 ETH

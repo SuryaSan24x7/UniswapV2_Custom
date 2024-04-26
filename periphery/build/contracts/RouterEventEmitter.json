@@ -1,0 +1,364 @@
+{
+  "contractName": "RouterEventEmitter",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256[]",
+          "name": "amounts",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "Amounts",
+      "type": "event"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"amounts\",\"type\":\"uint256[]\"}],\"name\":\"Amounts\",\"type\":\"event\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/test/RouterEventEmitter.sol\":\"RouterEventEmitter\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/ICustomV2Router01.sol\":{\"keccak256\":\"0xd339ef4ebb0c2c2b5c4a36398d60e3df35a624349efb11c2a143ead97a385b96\",\"urls\":[\"bzz-raw://6725dd4062c31c21b8a8e483903a554e966f2ca328d00ba1cd4bb3f13a0f984d\",\"dweb:/ipfs/QmbNjRXy5RYnTSP9TrTFGTcxZVjbg8dD7Ni5vpjmi7N2Cg\"]},\"project:/contracts/test/RouterEventEmitter.sol\":{\"keccak256\":\"0x53a8420e547b5c0be321e2a68aa972eb881fd1a4de7ae497eebd41e697934d5f\",\"urls\":[\"bzz-raw://3cbd4d6a93e2394427cf621e453b5b13e3cdcf0f250e0bb56b1a4877e771841b\",\"dweb:/ipfs/QmS7zbH9ZF3AMJtfVKG9Q5CNz2smi7278s12UUoFYgMP5y\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50604580601d6000396000f3fe608060405236600a57005b600080fdfea26469706673582212206c237172de54e292c315a30f8a004394b39d6c1554ddccf012ca841ebf6cdc2764736f6c63430006060033",
+  "deployedBytecode": "0x608060405236600a57005b600080fdfea26469706673582212206c237172de54e292c315a30f8a004394b39d6c1554ddccf012ca841ebf6cdc2764736f6c63430006060033",
+  "immutableReferences": {},
+  "sourceMap": "76:3213:28:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;76:3213:28;;;;;;;",
+  "deployedSourceMap": "76:3213:28:-:0;;;;;;;;12:1:-1;9;2:12",
+  "source": "pragma solidity =0.6.6;\r\n\r\nimport '../interfaces/ICustomV2Router01.sol';\r\n\r\ncontract RouterEventEmitter {\r\n    event Amounts(uint[] amounts);\r\n\r\n    receive() external payable {}\r\n/*\r\n    function swapExactTokensForTokens(\r\n        address router,\r\n        uint amountIn,\r\n        uint amountOutMin,\r\n        address[] calldata path,\r\n        address to,\r\n        uint deadline\r\n    ) external {\r\n        (bool success, bytes memory returnData) = router.delegatecall(abi.encodeWithSelector(\r\n            ICustomV2Router01(router).swapExactTokensForTokens.selector, amountIn, amountOutMin, path, to, deadline\r\n        ));\r\n        assert(success);\r\n        emit Amounts(abi.decode(returnData, (uint[])));\r\n    }\r\n\r\n    function swapTokensForExactTokens(\r\n        address router,\r\n        uint amountOut,\r\n        uint amountInMax,\r\n        address[] calldata path,\r\n        address to,\r\n        uint deadline\r\n    ) external {\r\n        (bool success, bytes memory returnData) = router.delegatecall(abi.encodeWithSelector(\r\n            ICustomV2Router01(router).swapTokensForExactTokens.selector, amountOut, amountInMax, path, to, deadline\r\n        ));\r\n        assert(success);\r\n        emit Amounts(abi.decode(returnData, (uint[])));\r\n    }\r\n\r\n    function swapExactETHForTokens(\r\n        address router,\r\n        uint amountOutMin,\r\n        address[] calldata path,\r\n        address to,\r\n        uint deadline\r\n    ) external payable {\r\n        (bool success, bytes memory returnData) = router.delegatecall(abi.encodeWithSelector(\r\n            ICustomV2Router01(router).swapExactETHForTokens.selector, amountOutMin, path, to, deadline\r\n        ));\r\n        assert(success);\r\n        emit Amounts(abi.decode(returnData, (uint[])));\r\n    }\r\n\r\n    function swapTokensForExactETH(\r\n        address router,\r\n        uint amountOut,\r\n        uint amountInMax,\r\n        address[] calldata path,\r\n        address to,\r\n        uint deadline\r\n    ) external {\r\n        (bool success, bytes memory returnData) = router.delegatecall(abi.encodeWithSelector(\r\n            ICustomV2Router01(router).swapTokensForExactETH.selector, amountOut, amountInMax, path, to, deadline\r\n        ));\r\n        assert(success);\r\n        emit Amounts(abi.decode(returnData, (uint[])));\r\n    }\r\n\r\n    function swapExactTokensForETH(\r\n        address router,\r\n        uint amountIn,\r\n        uint amountOutMin,\r\n        address[] calldata path,\r\n        address to,\r\n        uint deadline\r\n    ) external {\r\n        (bool success, bytes memory returnData) = router.delegatecall(abi.encodeWithSelector(\r\n            ICustomV2Router01(router).swapExactTokensForETH.selector, amountIn, amountOutMin, path, to, deadline\r\n        ));\r\n        assert(success);\r\n        emit Amounts(abi.decode(returnData, (uint[])));\r\n    }\r\n\r\n    function swapETHForExactTokens(\r\n        address router,\r\n        uint amountOut,\r\n        address[] calldata path,\r\n        address to,\r\n        uint deadline\r\n    ) external payable {\r\n        (bool success, bytes memory returnData) = router.delegatecall(abi.encodeWithSelector(\r\n            ICustomV2Router01(router).swapETHForExactTokens.selector, amountOut, path, to, deadline\r\n        ));\r\n        assert(success);\r\n        emit Amounts(abi.decode(returnData, (uint[])));\r\n    }\r\n    */\r\n}\r\n",
+  "sourcePath": "C:\\Users\\waghm\\Music\\Uniswap\\V2\\periphery\\contracts\\test\\RouterEventEmitter.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/test/RouterEventEmitter.sol",
+    "exportedSymbols": {
+      "RouterEventEmitter": [
+        7287
+      ]
+    },
+    "id": 7288,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7276,
+        "literals": [
+          "solidity",
+          "=",
+          "0.6",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:28"
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/ICustomV2Router01.sol",
+        "file": "../interfaces/ICustomV2Router01.sol",
+        "id": 7277,
+        "nodeType": "ImportDirective",
+        "scope": 7288,
+        "sourceUnit": 5153,
+        "src": "27:45:28",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 7287,
+        "linearizedBaseContracts": [
+          7287
+        ],
+        "name": "RouterEventEmitter",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 7282,
+            "name": "Amounts",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 7281,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7280,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "amounts",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7282,
+                  "src": "125:14:28",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 7278,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "125:4:28",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 7279,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "125:6:28",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "124:16:28"
+            },
+            "src": "111:30:28"
+          },
+          {
+            "body": {
+              "id": 7285,
+              "nodeType": "Block",
+              "src": "176:2:28",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 7286,
+            "implemented": true,
+            "kind": "receive",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7283,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "156:2:28"
+            },
+            "returnParameters": {
+              "id": 7284,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "176:0:28"
+            },
+            "scope": 7287,
+            "src": "149:29:28",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 7288,
+        "src": "76:3213:28"
+      }
+    ],
+    "src": "0:3291:28"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/test/RouterEventEmitter.sol",
+      "exportedSymbols": {
+        "RouterEventEmitter": [
+          7287
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "=",
+            "0.6",
+            ".6"
+          ]
+        },
+        "id": 7276,
+        "name": "PragmaDirective",
+        "src": "0:23:28"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 5153,
+          "absolutePath": "project:/contracts/interfaces/ICustomV2Router01.sol",
+          "file": "../interfaces/ICustomV2Router01.sol",
+          "scope": 7288,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 7277,
+        "name": "ImportDirective",
+        "src": "27:45:28"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            7287
+          ],
+          "name": "RouterEventEmitter",
+          "scope": 7288
+        },
+        "children": [
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "Amounts"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "mutability": "mutable",
+                      "name": "amounts",
+                      "overrides": null,
+                      "scope": 7282,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256[]",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "uint256[]"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint",
+                              "type": "uint256"
+                            },
+                            "id": 7278,
+                            "name": "ElementaryTypeName",
+                            "src": "125:4:28"
+                          }
+                        ],
+                        "id": 7279,
+                        "name": "ArrayTypeName",
+                        "src": "125:6:28"
+                      }
+                    ],
+                    "id": 7280,
+                    "name": "VariableDeclaration",
+                    "src": "125:14:28"
+                  }
+                ],
+                "id": 7281,
+                "name": "ParameterList",
+                "src": "124:16:28"
+              }
+            ],
+            "id": 7282,
+            "name": "EventDefinition",
+            "src": "111:30:28"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "receive",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "overrides": null,
+              "scope": 7287,
+              "stateMutability": "payable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7283,
+                "name": "ParameterList",
+                "src": "156:2:28"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7284,
+                "name": "ParameterList",
+                "src": "176:0:28"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7285,
+                "name": "Block",
+                "src": "176:2:28"
+              }
+            ],
+            "id": 7286,
+            "name": "FunctionDefinition",
+            "src": "149:29:28"
+          }
+        ],
+        "id": 7287,
+        "name": "ContractDefinition",
+        "src": "76:3213:28"
+      }
+    ],
+    "id": 7288,
+    "name": "SourceUnit",
+    "src": "0:3291:28"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.6+commit.6c089d02.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-04-26T08:30:17.311Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
