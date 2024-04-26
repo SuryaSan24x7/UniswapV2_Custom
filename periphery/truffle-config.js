@@ -43,8 +43,9 @@
 
 
 require('dotenv').config();
-const { PRIVATE_KEY, ALCHEMY_URL } = process.env;
+const { PRIVATE_KEY, ALCHEMY_URL ,ETHERSCAN } = process.env;
 const HDWalletProvider = require('@truffle/hdwallet-provider');
+const VerifyPlugin = require('truffle-plugin-verify');
 
 module.exports = {
   /**
@@ -108,6 +109,12 @@ module.exports = {
   // Set default mocha options here, use special reporters, etc.
   mocha: {
     // timeout: 100000
+  },
+  plugins: [
+    'truffle-plugin-verify'
+  ],
+  api_keys: {
+    etherscan: ETHERSCAN
   },
 
   // Configure your compilers

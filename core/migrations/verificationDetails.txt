@@ -1,0 +1,31 @@
+$ truffle run verify CustomV2Factory --network sepolia
+Verifying contracts on etherscan
+   Verifying CustomV2Factory
+   Pass - Verified: https://sepolia.etherscan.io/address/0xa79D345c50e644ca1C478f4C83fE0C3CF9e7Ac22#code
+   Successfully verified 1 contract(s).
+Verifying contracts on sourcify
+   Verifying CustomV2Factory
+   Pass - Verified: https://sourcify.dev/#/lookup/0xa79D345c50e644ca1C478f4C83fE0C3CF9e7Ac22
+   Successfully verified 1 contract(s).
+
+
+$ truffle run verify Token1 --network sepolia
+Verifying contracts on etherscan
+   Verifying Token1
+   Pass - Verified: https://sepolia.etherscan.io/address/0x5af8820304481811Fa3B4bB0A15B8B11245F4acE#code
+   Successfully verified 1 contract(s).
+Verifying contracts on sourcify
+   Verifying Token1
+   Pass - Verified: https://sourcify.dev/#/lookup/0x5af8820304481811Fa3B4bB0A15B8B11245F4acE
+   Successfully verified 1 contract(s).
+
+
+$ truffle run verify Token2 --network sepolia
+Verifying contracts on etherscan
+   Verifying Token2
+   Pass - Verified: https://sepolia.etherscan.io/address/0xBFa4E445F77Af3373db816D20D2360cA8370E259#code
+   Successfully verified 1 contract(s).
+Verifying contracts on sourcify
+   Verifying Token2
+   Pass - Verified: https://sourcify.dev/#/lookup/0xBFa4E445F77Af3373db816D20D2360cA8370E259
+   Successfully verified 1 contract(s).

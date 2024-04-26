@@ -1,0 +1,19 @@
+$ truffle run verify WETH --network sepolia
+Verifying contracts on etherscan
+   Verifying WETH
+   Pass - Verified: https://sepolia.etherscan.io/address/0x5970a044C45869a252E9fe5b6ed3114602870dB3#code
+   Successfully verified 1 contract(s).
+Verifying contracts on sourcify
+   Verifying WETH
+   Contract source code already verified: https://sourcify.dev/#/lookup/0x5970a044C45869a252E9fe5b6ed3114602870dB3
+   Successfully verified 1 contract(s).
+
+$ truffle run verify CustomV2Router02 --network sepolia
+Verifying contracts on etherscan
+   Verifying CustomV2Router02
+   Pass - Verified: https://sepolia.etherscan.io/address/0x0fA0400F05e29B09559AD11D8132E6e5bd23543A#code
+   Successfully verified 1 contract(s).
+Verifying contracts on sourcify
+   Verifying CustomV2Router02
+   Contract source code already verified: https://sourcify.dev/#/lookup/0x0fA0400F05e29B09559AD11D8132E6e5bd23543A
+   Successfully verified 1 contract(s).

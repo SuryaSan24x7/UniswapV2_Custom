@@ -1,0 +1,12 @@
+{
+    "network": "sepolia",
+    "routerAddress": "0x0fA0400F05e29B09559AD11D8132E6e5bd23543A",
+    "wethAddress": "0x5970a044C45869a252E9fe5b6ed3114602870dB3",
+  
+  
+  
+    "factoryAddress": "0xa79D345c50e644ca1C478f4C83fE0C3CF9e7Ac22",
+    "token1Address": "0x5af8820304481811Fa3B4bB0A15B8B11245F4acE",
+    "token2Address": "0xBFa4E445F77Af3373db816D20D2360cA8370E259"
+  }
+  

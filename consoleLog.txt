@@ -1,0 +1,176 @@
+2_deploy_contracts.js
+=====================
+
+   Deploying 'CustomV2Factory'
+   ---------------------------
+   > transaction hash:    0xc9318093dfc390a69205cadd6260f66a23e71787bec82b86b5012f997c7f8319
+   > Blocks: 0            Seconds: 9
+   > contract address:    0xa79D345c50e644ca1C478f4C83fE0C3CF9e7Ac22
+   > block number:        5780283
+   > block timestamp:     1714118868
+   > account:             0x2f7c9dF48B56C3eac337289f5297ACaF1c555e2a
+   > balance:             0.249906984166668216
+   > gas used:            4138248 (0x3f2508)
+   > gas price:           4.855440233 gwei
+   > value sent:          0 ETH
+   > total cost:          0.020093015833331784 ETH
+
+   Pausing for 2 confirmations...
+
+   -------------------------------
+   > confirmation number: 1 (block: 5780284)
+   > confirmation number: 2 (block: 5780285)
+
+   Deploying 'Token1'
+   ------------------
+   > transaction hash:    0xcafc6fdfad500fb737c79a90b340edc35e214220920600ed658d78f1701418f4
+   > Blocks: 1            Seconds: 16
+   > contract address:    0x5af8820304481811Fa3B4bB0A15B8B11245F4acE
+   > block number:        5780287
+   > block timestamp:     1714118916
+   > account:             0x2f7c9dF48B56C3eac337289f5297ACaF1c555e2a
+   > balance:             0.245051539525596954
+   > gas used:            1056846 (0x10204e)
+   > gas price:           4.594278297 gwei
+   > value sent:          0 ETH
+   > total cost:          0.004855444641071262 ETH
+
+   Pausing for 2 confirmations...
+
+   -------------------------------
+   > confirmation number: 1 (block: 5780288)
+   > confirmation number: 2 (block: 5780289)
+
+   Deploying 'Token2'
+   ------------------
+   > transaction hash:    0xb48a5d7941060406d01864fdff113b7236268c4605821d1ac16e5eb7bc346813
+   > Blocks: 2            Seconds: 16
+   > contract address:    0xBFa4E445F77Af3373db816D20D2360cA8370E259
+   > block number:        5780291
+   > block timestamp:     1714118964
+   > account:             0x2f7c9dF48B56C3eac337289f5297ACaF1c555e2a
+   > balance:             0.23996471222141538
+   > gas used:            1056846 (0x10204e)
+   > gas price:           4.813215269 gwei
+   > value sent:          0 ETH
+   > total cost:          0.005086827304181574 ETH
+
+   Pausing for 2 confirmations...
+
+   -------------------------------
+   > confirmation number: 1 (block: 5780292)
+   > confirmation number: 2 (block: 5780293)
+Deployment data has been written to deploymentData.json
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.03003528777858462 ETH
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.03003528777858462 ETH
+
+$ truffle run verify CustomV2Factory --network sepolia
+Verifying contracts on etherscan
+   Verifying CustomV2Factory
+   Pass - Verified: https://sepolia.etherscan.io/address/0xa79D345c50e644ca1C478f4C83fE0C3CF9e7Ac22#code
+   Successfully verified 1 contract(s).
+Verifying contracts on sourcify
+   Verifying CustomV2Factory
+   Pass - Verified: https://sourcify.dev/#/lookup/0xa79D345c50e644ca1C478f4C83fE0C3CF9e7Ac22
+   Successfully verified 1 contract(s).
+
+
+$ truffle run verify Token1 --network sepolia
+Verifying contracts on etherscan
+   Verifying Token1
+   Pass - Verified: https://sepolia.etherscan.io/address/0x5af8820304481811Fa3B4bB0A15B8B11245F4acE#code
+   Successfully verified 1 contract(s).
+Verifying contracts on sourcify
+   Verifying Token1
+   Pass - Verified: https://sourcify.dev/#/lookup/0x5af8820304481811Fa3B4bB0A15B8B11245F4acE
+   Successfully verified 1 contract(s).
+
+
+$ truffle run verify Token2 --network sepolia
+Verifying contracts on etherscan
+   Verifying Token2
+   Pass - Verified: https://sepolia.etherscan.io/address/0xBFa4E445F77Af3373db816D20D2360cA8370E259#code
+   Successfully verified 1 contract(s).
+Verifying contracts on sourcify
+   Verifying Token2
+   Pass - Verified: https://sourcify.dev/#/lookup/0xBFa4E445F77Af3373db816D20D2360cA8370E259
+   Successfully verified 1 contract(s).
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'WETH'
+   ----------------
+   > transaction hash:    0x7477bf167acf3b42b01acc02f37a5a65803eb8cbce8a643c29ce29e97db49ecb
+   > Blocks: 1            Seconds: 13
+   > contract address:    0x5970a044C45869a252E9fe5b6ed3114602870dB3
+   > block number:        5780397
+   > block timestamp:     1714120236
+   > account:             0x2f7c9dF48B56C3eac337289f5297ACaF1c555e2a
+   > balance:             0.21937162031680888
+   > gas used:            830246 (0xcab26)
+   > gas price:           3.953990437 gwei
+   > value sent:          0 ETH
+   > total cost:          0.003282784744357502 ETH
+
+   Pausing for 2 confirmations...
+
+   -------------------------------
+   > confirmation number: 1 (block: 5780398)
+   > confirmation number: 2 (block: 5780399)
+
+   Deploying 'CustomV2Router02'
+   ----------------------------
+   > transaction hash:    0x7e2948cdb5b2d8e70c36fb7978341433a37a6956592b17f9da8a2e02675d07cf
+   > Blocks: 1            Seconds: 9
+   > contract address:    0x0fA0400F05e29B09559AD11D8132E6e5bd23543A
+   > block number:        5780400
+   > block timestamp:     1714120272
+   > account:             0x2f7c9dF48B56C3eac337289f5297ACaF1c555e2a
+   > balance:             0.207528232889652504
+   > gas used:            3023846 (0x2e23e6)
+   > gas price:           3.916663556 gwei
+   > value sent:          0 ETH
+   > total cost:          0.011843387427156376 ETH
+
+   Pausing for 2 confirmations...
+
+   -------------------------------
+   > confirmation number: 1 (block: 5780401)
+   > confirmation number: 2 (block: 5780402)
+Deployment data has been written to deploymentData.json
+Console logs have been written to consoleLogs.txt
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.015126172171513878 ETH
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.015126172171513878 ETH
+
+$ truffle run verify WETH --network sepolia
+Verifying contracts on etherscan
+   Verifying WETH
+   Pass - Verified: https://sepolia.etherscan.io/address/0x5970a044C45869a252E9fe5b6ed3114602870dB3#code
+   Successfully verified 1 contract(s).
+Verifying contracts on sourcify
+   Verifying WETH
+   Contract source code already verified: https://sourcify.dev/#/lookup/0x5970a044C45869a252E9fe5b6ed3114602870dB3
+   Successfully verified 1 contract(s).
+
+$ truffle run verify CustomV2Router02 --network sepolia
+Verifying contracts on etherscan
+   Verifying CustomV2Router02
+   Pass - Verified: https://sepolia.etherscan.io/address/0x0fA0400F05e29B09559AD11D8132E6e5bd23543A#code
+   Successfully verified 1 contract(s).
+Verifying contracts on sourcify
+   Verifying CustomV2Router02
+   Contract source code already verified: https://sourcify.dev/#/lookup/0x0fA0400F05e29B09559AD11D8132E6e5bd23543A
+   Successfully verified 1 contract(s).
