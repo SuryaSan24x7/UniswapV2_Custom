@@ -70,14 +70,18 @@ Certainly! Here are the instructions for running the project:
 
 To run this project, follow these steps:
 
-1. **Create Alchemy Account and Metamask Wallet**:
+To run this project, follow these steps:
+
+1. **Create Alchemy Account, Metamask Wallet, and etherscan Account**:
    - Create an account on [Alchemy](https://alchemy.com/) to get an API key.
    - Install [Metamask](https://metamask.io/) extension in your browser and create a wallet.
+   - Create an account on [Etherscan](https://etherscan.io/) to generate an API key.
 
 2. **Create `.env` File**:
    - Create a `.env` file in the root directory using `.env.example` as a template.
    - Provide your Alchemy API key and account private key in the `.env` file.
    - Set the `ALCHEMY_URL` variable to `'https://eth-sepolia.g.alchemy.com/v2/{API_Key}'`.
+   - Add your Etherscan API key to the `.env` file.
    - In the periphery folder, add the factory contract address to the `.env` file.
 
 3. **Install Dependencies**:
@@ -91,4 +95,11 @@ To run this project, follow these steps:
      ```bash
      truffle migrate --network sepolia
      ```
+5. **Verify Contracts**
+   - For verification, ensure you have added your Etherscan API key to the .env file.
+   - Run the following command to verify a contract:
+    ```bash
+   truffle run verify <ContractName> --network <networkName>
+   ```
+   - Replace <ContractName> with the name of your contract and <networkName> with the network on which the contract was deployed.
 
